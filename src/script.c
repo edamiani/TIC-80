@@ -29,6 +29,10 @@
 
 #if defined(TIC_RUNTIME_STATIC)
 
+#if defined(TIC_BUILD_WITH_RETROASM)
+extern tic_script EXPORT_SCRIPT(RetroAsm);
+#endif
+
 #if defined (TIC_BUILD_WITH_LUA)
 extern tic_script EXPORT_SCRIPT(Lua);
 #endif
@@ -78,6 +82,10 @@ extern tic_script EXPORT_SCRIPT(Python);
 static const tic_script *Scripts[MAX_SUPPORTED_LANGS + 1] =
 {
 #if defined(TIC_RUNTIME_STATIC)
+	#if defined(TIC_BUILD_WITH_RETROASM)
+    &EXPORT_SCRIPT(RetroAsm),
+	#endif
+
     #if defined (TIC_BUILD_WITH_LUA)
     &EXPORT_SCRIPT(Lua),
     #endif

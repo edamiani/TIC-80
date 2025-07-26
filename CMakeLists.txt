@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.50)
 
 include(cmake/version.cmake)
 
@@ -165,6 +165,7 @@ include(cmake/squirrel.cmake)
 include(cmake/pocketpy.cmake)
 include(cmake/quickjs.cmake)
 include(cmake/janet.cmake)
+include(cmake/retroasm.cmake)
 
 include(cmake/core.cmake)
 include(cmake/wave.cmake)
